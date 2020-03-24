@@ -4,7 +4,7 @@ Idea: Use one representation of letters like A to generate another representatio
 
 That could be: 
 
-`letter(‘A‘)` yields maybe
+`letter(‘A‘)` yields maybe 2
 ```
     A
    A A  

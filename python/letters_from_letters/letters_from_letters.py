@@ -1,13 +1,9 @@
 """Letters from letters."""
+import json
 
-MAP = {
-    'A': ('''
-        A
-   A A  
-  AAAAA  
- A     A'''
-    ),
-}
+DATA_PATH = 'letter_map.json'
+ENCODING = 'utf-8'
+MAP = json.load(open(DATA_PATH, encoding=ENCODING))
 
 
 def letter(char):
@@ -18,7 +14,6 @@ def letter(char):
 if __name__ == '__main__':
     import sys
     for char in sys.argv[1:]:
-        mapping = letter(char) or '?'
-        display = '\n'.join(mapping).replace(' ', '_')
-        print(f"{char} :-> {display}")
+        print(letter(char) or MAP['?'])
+
     
